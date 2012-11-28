@@ -1,0 +1,21 @@
+---
+layout: post
+title: "在vim配置文件中判断操作系统"
+date: 2012-11-28 14:23
+comments: true
+categories: vim
+---
+
+在vimsrc有时候需要针对不同的操作系统进行设置。利用has操作符就可以实现。如：
+
+    if has('win32') || has('win64')
+        #.....
+    elseif has('mac')
+        #....
+    endif
+
+相关命令：
+--------
+    :he has
+    :he feature-list
+    :echo has('win32')
